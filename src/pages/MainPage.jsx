@@ -1,10 +1,9 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import budgetCont from "../contexts/BudgetContext"
 import BudgetContext from "../contexts/BudgetContext";
 
 export default function MainPage() {
-    
-    
+
     
     return (
         

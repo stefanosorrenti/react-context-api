@@ -15,13 +15,13 @@ function App() {
   //DATA
   
   //USE STATE
-  const [budgetMode, setbudgetMode] = useState(false)
+  const [budgetMode, setBudgetMode] = useState(false)
 
   return (
 
 
 
-    <BudgetContext.Provider value={ {budgetMode, setbudgetMode} }>
+    <BudgetContext.Provider value={ {budgetMode, setBudgetMode} }>
       <BrowserRouter>
 
         <Routes>
