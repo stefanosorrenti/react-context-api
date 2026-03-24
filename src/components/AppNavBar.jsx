@@ -17,7 +17,7 @@ export default function AppNavBar() {
             setButtonTitle('Attiva modalità budget')
         }
         
-        console.log(budgetMode);
+        //console.log(budgetMode);
         
     }
     return (
