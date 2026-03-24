@@ -1,7 +1,7 @@
 //IMPORTS
 import { NavLink } from "react-router-dom"
 export default function AppNavBar () {
-
+    
     return(
 
         /* NavBar */
@@ -11,6 +11,7 @@ export default function AppNavBar () {
                 </a>
                 {/* Navbar Item */}
                 <ul className="nav nav-pills justify-content-center">
+                    
                     <li className="nav-item">
                         <NavLink className="nav-link" to = "/info" >Chi siamo?</NavLink>
                     </li>
@@ -20,7 +21,9 @@ export default function AppNavBar () {
                     <li className="nav-item">
                         <NavLink to="./prodotti" className="nav-link">Scopri i nostri prodotti</NavLink>
                     </li>
+                    
                 </ul>
+                        <button className="btn btn-danger">Attiva Modalita Budget</button>
 
             </nav>
 
