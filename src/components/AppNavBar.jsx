@@ -5,21 +5,16 @@ import BudgetContext from "../contexts/BudgetContext"
 export default function AppNavBar() {
 
     //DATA
-    const {budgetMode, setBudgetMode} = useContext(BudgetContext)
+    const {budgetMode, setBudgetMode} = useContext(BudgetContext) 
+    
     //USE STATE
-    const [buttonTitle, setButtonTitle] = useState('Attiva modalità budget')
+    
 
-    function setButtonMode () {
-        setBudgetMode(!budgetMode)
-        if(budgetMode) {
-            setButtonTitle('Disattiva modalità budget')
-        } else {
-            setButtonTitle('Attiva modalità budget')
-        }
+    
         
         //console.log(budgetMode);
         
-    }
+    
     return (
 
 
@@ -32,17 +27,22 @@ export default function AppNavBar() {
             <ul className="nav nav-pills justify-content-center">
 
                 <li className="nav-item">
-                    <NavLink className="nav-link" to="/info" >Chi siamo?</NavLink>
+                    <NavLink className="nav-link" to="/info" onClick={() => setBudgetMode(null)}>Chi siamo?</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/" className="nav-link" aria-current="page">Home</NavLink>
+                    <NavLink to="/" className="nav-link" aria-current="page" onClick={() => setBudgetMode(null)}>Home</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="./prodotti" className="nav-link">Scopri i nostri prodotti</NavLink>
+                    <NavLink to="./prodotti" className="nav-link" onClick={() => setBudgetMode(true)}>Scopri i nostri prodotti</NavLink>
                 </li>
 
             </ul>
-            <button className={budgetMode ? 'btn btn-success' : 'btn btn-danger'} onClick={setButtonMode}>{buttonTitle}</button>
+            {budgetMode ? (
+                
+                <button className='btn btn-success'onClick={() => setBudgetMode(!budgetMode)} >Attiva la modalità budget</button>
+            ):(
+                 <button className={budgetMode == null ?  'd-none' : 'btn btn-danger' } onClick={() => setBudgetMode(!budgetMode)}>Disattiva la modalità budget</button>
+            )}
 
         </nav>
 
