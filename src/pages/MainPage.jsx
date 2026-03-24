@@ -1,6 +1,11 @@
+import { useContext } from "react"
+import budgetCont from "../contexts/BudgetContext"
+import BudgetContext from "../contexts/BudgetContext";
+
 export default function MainPage() {
-
-
+    
+    
+    
     return (
         
             
@@ -8,6 +13,7 @@ export default function MainPage() {
                 <div className="container">
 
                     {/* Title */}
+                    
                     <h1 className="text-center text-black py-2">Altro che amazon!</h1>
                     <p className="text-body-tertiary fw-semibold">Scopri le migliori offerte per te.</p>
 
