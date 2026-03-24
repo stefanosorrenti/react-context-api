@@ -15,7 +15,7 @@ function App() {
   //DATA
   
   //USE STATE
-  const [budgetMode, setBudgetMode] = useState(false)
+  const [budgetMode, setBudgetMode] = useState(true)
 
   return (
 

@@ -11,11 +11,13 @@ export default function AppNavBar() {
 
     function setButtonMode () {
         setBudgetMode(!budgetMode)
-        if( budgetMode) {
+        if(budgetMode) {
             setButtonTitle('Disattiva modalità budget')
         } else {
             setButtonTitle('Attiva modalità budget')
         }
+        
+        console.log(budgetMode);
         
     }
     return (
@@ -40,7 +42,7 @@ export default function AppNavBar() {
                 </li>
 
             </ul>
-            <button className="btn btn-danger" onClick={setButtonMode}>{buttonTitle}</button>
+            <button className={budgetMode ? 'btn btn-success' : 'btn btn-danger'} onClick={setButtonMode}>{buttonTitle}</button>
 
         </nav>
 
